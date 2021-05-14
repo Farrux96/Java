@@ -1,13 +1,10 @@
 package JUnit;
-
 class TestThread extends Thread {
     final private TestRunner runner;
-
     public TestThread(TestRunner runner) {
         super();
         this.runner = runner;
     }
-
     @Override
     public void run() {
         Analyzer analyzer = new Analyzer();
@@ -21,5 +18,4 @@ class TestThread extends Thread {
             runner.sendInfo(analyzer);
         }
     }
-
 }
